@@ -44,16 +44,9 @@ body {
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 0, 255, 0.8);
 }
 
-.carousel-card img{
+.carousel-card img, .carousel-card a {
     max-width: 100%;
     max-height: 80%;
-    object-fit: contain;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.carousel-card a{
-    max-width: 100%;
-
     object-fit: contain;
     border-radius: 10px;
     margin-bottom: 10px;
