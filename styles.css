@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2a0047, #000000);
+    overflow: hidden;
+    perspective: 1000px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+}
+
+.carousel-container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    transform-style: preserve-3d;
+    animation: rotateCarousel 30s infinite linear;
+    transform: rotateY(0deg);
+}
+
+.carousel-card {
+    position: absolute;
+    width: 280px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    transition: all 0.5s ease;
+}
+
+.carousel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 0, 255, 0.8);
+}
+
+.carousel-card img {
+    max-width: 100%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-card h2 {
+    margin: 5px 0 0;
+    font-size: 2.2em;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #ffeb3b;
+    letter-spacing: 2px;
+}
+
+.carousel-card p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    color: #ffee58;
+}
+
+/* Posicionamiento de cada tarjeta */
+.carousel-card:nth-child(1) { transform: rotateY(0deg) translateZ(500px); }
+.carousel-card:nth-child(2) { transform: rotateY(72deg) translateZ(500px); }
+.carousel-card:nth-child(3) { transform: rotateY(144deg) translateZ(500px); }
+.carousel-card:nth-child(4) { transform: rotateY(216deg) translateZ(500px); }
+.carousel-card:nth-child(5) { transform: rotateY(288deg) translateZ(500px); }
+
+@keyframes rotateCarousel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
